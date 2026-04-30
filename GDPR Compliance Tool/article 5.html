@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 document -->
+
+<html lang="en-GB">
+<!-- Starts the HTML document and sets the language to British English -->
+
+<head>
+  <!-- The head contains page information for the browser -->
+
+  <meta charset="UTF-8">
+  <!-- Allows the page to display text and symbols correctly -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes the page responsive on different screen sizes -->
+
+  <title>Article 5 Training</title>
+  <!-- Sets the title shown in the browser tab -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Links the external CSS file for styling -->
+</head>
+
+<body>
+<!-- Starts the visible content of the webpage -->
+
+<header>
+  <!-- Top section of the page -->
+
+  <h1>GDPR Compliance Support Tool</h1>
+  <!-- Main heading shown at the top -->
+
+  <p>Article 5 Training: Data Protection Principles</p>
+  <!-- Subtitle explaining the page topic -->
+</header>
+
+<main class="container">
+  <!-- Main content area of the page -->
+
+  <h2>Article 5 Training Module</h2>
+  <!-- Section heading for the training module -->
+
+  <p>
+    Article 5 sets out the key principles organisations must follow when processing
+    personal data. Read each section and answer the question to track your progress.
+  </p>
+  <!-- Introductory text explaining the purpose of the module -->
+
+  <div class="progress-wrapper">
+    <!-- Groups the progress text and progress bar -->
+
+    <p id="progressText">Progress: 0 / 10 completed</p>
+    <!-- Text showing how many questions have been completed -->
+
+    <div class="progress-bar">
+      <!-- Outer progress bar -->
+
+      <div id="progressFill" class="progress-fill"></div>
+      <!-- Inner progress fill that will grow as progress increases -->
+    </div>
+  </div>
+
+  <section class="lesson-card">
+    <!-- Lesson card 1 -->
+
+    <h3>1. Lawfulness, Fairness and Transparency</h3>
+    <p><strong>Learn:</strong> Personal data must be processed lawfully, fairly, and transparently.</p>
+    <p><strong>Example:</strong> A company explains in its privacy notice why it collects customer email addresses.</p>
+    <p><strong>Question:</strong> Which option best shows transparency?</p>
+
+    <div class="options">
+      <!-- Answer buttons for question 1 -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback1')">Collecting data without explaining why</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, true, 'feedback1'); markComplete(1)">Clearly explaining why data is collected</button>
+      <!-- Correct answer, also marks question 1 as complete -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback1')">Using hidden consent wording</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback1" class="feedback"></div>
+    <!-- Empty area where feedback for question 1 will appear -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 2 -->
+
+    <h3>2. Purpose Limitation</h3>
+    <p><strong>Learn:</strong> Data should only be collected for specified, explicit, and legitimate purposes.</p>
+    <p><strong>Example:</strong> Contact details collected for enrolment should not later be used for unrelated marketing.</p>
+    <p><strong>Question:</strong> A gym collects phone numbers for emergencies and later uses them for promotions. What principle is at risk?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback2'); markComplete(2)">Purpose limitation</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback2')">Accuracy</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback2')">Integrity and confidentiality</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback2" class="feedback"></div>
+    <!-- Feedback area for question 2 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 3 -->
+
+    <h3>3. Data Minimisation</h3>
+    <p><strong>Learn:</strong> Only collect the personal data that is necessary for the purpose.</p>
+    <p><strong>Example:</strong> A newsletter form asks only for an email address, not extra unnecessary details.</p>
+    <p><strong>Question:</strong> Which option best follows data minimisation?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, false, 'feedback3')">Collecting all possible information just in case</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, true, 'feedback3'); markComplete(3)">Collecting only the data needed for the service</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback3')">Making unnecessary fields mandatory</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback3" class="feedback"></div>
+    <!-- Feedback area for question 3 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 4 -->
+
+    <h3>4. Accuracy</h3>
+    <p><strong>Learn:</strong> Personal data must be accurate and kept up to date where necessary.</p>
+    <p><strong>Example:</strong> An employee updates their address and the employer corrects the record promptly.</p>
+    <p><strong>Question:</strong> Keeping outdated emergency contact details after being told of a change affects which principle?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, false, 'feedback4')">Storage limitation</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, true, 'feedback4'); markComplete(4)">Accuracy</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback4')">Lawfulness</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback4" class="feedback"></div>
+    <!-- Feedback area for question 4 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 5 -->
+
+    <h3>5. Storage Limitation</h3>
+    <p><strong>Learn:</strong> Personal data should not be kept for longer than necessary.</p>
+    <p><strong>Example:</strong> A company deletes unsuccessful job applications after its retention period expires.</p>
+    <p><strong>Question:</strong> Why is keeping data too long a risk?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, false, 'feedback5')">Because it improves fairness</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, true, 'feedback5'); markComplete(5)">Because it increases privacy and compliance risk</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback5')">Because it creates a lawful basis automatically</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback5" class="feedback"></div>
+    <!-- Feedback area for question 5 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 6 -->
+
+    <h3>6. Integrity and Confidentiality</h3>
+    <p><strong>Learn:</strong> Personal data must be kept secure using appropriate technical and organisational measures.</p>
+    <p><strong>Example:</strong> A business uses encryption, strong passwords, and access controls for HR files.</p>
+    <p><strong>Question:</strong> Which option best supports this principle?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, false, 'feedback6')">Sharing passwords between staff</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, true, 'feedback6'); markComplete(6)">Using access controls and encryption</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback6')">Allowing all staff to access all data</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback6" class="feedback"></div>
+    <!-- Feedback area for question 6 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 7 -->
+
+    <h3>7. Accountability</h3>
+    <p><strong>Learn:</strong> Organisations must be able to demonstrate compliance with GDPR principles.</p>
+    <p><strong>Example:</strong> A company keeps training records, policies, audits, and lawful basis documentation.</p>
+    <p><strong>Question:</strong> Which option best shows accountability?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, false, 'feedback7')">Assuming staff know GDPR without evidence</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, true, 'feedback7'); markComplete(7)">Keeping policies, records, and training evidence</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback7')">Deleting compliance records once created</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback7" class="feedback"></div>
+    <!-- Feedback area for question 7 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 8 -->
+
+    <h3>8. Privacy Notices</h3>
+    <p><strong>Learn:</strong> A privacy notice supports transparency by explaining what data is collected, why it is used, and people’s rights.</p>
+    <p><strong>Question:</strong> What is the main purpose of a privacy notice?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback8'); markComplete(8)">To clearly inform people how their personal data is used</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback8')">To avoid all GDPR responsibilities</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback8')">To replace security controls</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback8" class="feedback"></div>
+    <!-- Feedback area for question 8 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 9 -->
+
+    <h3>9. Retention and Deletion</h3>
+    <p><strong>Learn:</strong> Organisations should have clear retention periods and deletion processes.</p>
+    <p><strong>Question:</strong> What is the main benefit of having a retention schedule?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, false, 'feedback9')">It removes the need for a lawful basis</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, true, 'feedback9'); markComplete(9)">It helps ensure data is not kept longer than necessary</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback9')">It makes all processing fair automatically</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback9" class="feedback"></div>
+    <!-- Feedback area for question 9 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 10 -->
+
+    <h3>10. Staff Awareness</h3>
+    <p><strong>Learn:</strong> Staff training helps organisations apply the principles consistently in daily practice.</p>
+    <p><strong>Question:</strong> Why is staff training important for Article 5 compliance?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, false, 'feedback10')">Because GDPR only applies to trained staff</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, true, 'feedback10'); markComplete(10)">Because staff need to understand how to handle personal data properly</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback10')">Because it replaces organisational policies</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback10" class="feedback"></div>
+    <!-- Feedback area for question 10 -->
+  </section>
+
+  <div id="completionMessage" class="result-box" style="display: none;">
+    Well done. You completed the Article 5 training module.
+  </div>
+  <!-- Hidden completion message that can be shown when all questions are done -->
+
+  <a href="index.html" class="back-link">← Back to Dashboard</a>
+  <!-- Link back to the dashboard page -->
+</main>
+
+<script src="js/article5.js"></script>
+<!-- Links the JavaScript file that controls the quiz behaviour -->
+
+</body>
+<!-- Ends the body section -->
+
+</html>
+<!-- Ends the HTML document -->
+
+<script src="js/article 5.js"></script>
+<!-- This loads another JavaScript file, but it is outside the HTML document and is likely a mistake -->

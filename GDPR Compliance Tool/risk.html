@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 document -->
+
+<html lang="en-GB">
+<!-- Starts the HTML document and sets the language to British English -->
+
+<head>
+  <!-- The head contains page information for the browser -->
+
+  <meta charset="UTF-8">
+  <!-- Allows text and symbols to display correctly -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes the page responsive on different screen sizes -->
+
+  <title>GDPR Risk Scan</title>
+  <!-- Sets the browser tab title -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Links the external CSS file used to style the page -->
+</head>
+
+<body>
+<!-- Starts the visible content of the webpage -->
+
+<header>
+  <!-- Top section of the page -->
+
+  <h1>GDPR Compliance Support Tool</h1>
+  <!-- Main heading shown at the top of the page -->
+
+  <p>Compliance Risk Scan</p>
+  <!-- Subtitle showing the purpose of this page -->
+</header>
+
+<main class="container">
+  <!-- Main content area of the page -->
+
+  <section class="intro">
+    <!-- Introductory section -->
+
+    <h2>GDPR Risk Scan</h2>
+    <!-- Main heading for the risk scan tool -->
+
+    <p>
+      Select the statements that best match your scenerios organisation’s general practices.
+      Do not enter real personal data, sensitive data, or confidential organisational details.
+    </p>
+    <!-- Explains what the user should do and warns them not to enter sensitive information -->
+
+    <p>
+      This website does not save your responses. Results are generated in your browser only.
+    </p>
+    <!-- Reassures the user that responses are not stored -->
+  </section>
+
+  <section class="panel">
+    <!-- Main interactive section containing the risk checklist -->
+
+    <label><input type="checkbox" class="risk-check"> No clear privacy notice is provided</label>
+    <!-- Checkbox for missing privacy notice -->
+
+    <label><input type="checkbox" class="risk-check"> More personal data is collected than necessary</label>
+    <!-- Checkbox for collecting too much personal data -->
+
+    <label><input type="checkbox" class="risk-check"> No retention or deletion process is in place</label>
+    <!-- Checkbox for lack of retention and deletion procedures -->
+
+    <label><input type="checkbox" class="risk-check"> Weak access controls protect personal data</label>
+    <!-- Checkbox for poor access control security -->
+
+    <label><input type="checkbox" class="risk-check"> Staff are unsure which lawful basis applies</label>
+    <!-- Checkbox for lack of understanding of lawful basis -->
+
+    <label><input type="checkbox" class="risk-check"> Staff have not received GDPR training</label>
+    <!-- Checkbox for lack of staff training -->
+
+    <label><input type="checkbox" class="risk-check"> No record of lawful basis decisions is kept</label>
+    <!-- Checkbox for poor accountability and missing records -->
+
+    <label><input type="checkbox" class="risk-check"> Sensitive data could be shared insecurely</label>
+    <!-- Checkbox for insecure sharing of sensitive data -->
+
+    <label><input type="checkbox" class="risk-check"> Data accuracy is not reviewed regularly</label>
+    <!-- Checkbox for not checking whether data stays accurate -->
+
+    <label><input type="checkbox" class="risk-check"> Old data is kept longer than necessary</label>
+    <!-- Checkbox for excessive data retention -->
+
+    <button type="button" onclick="runRiskScan()">Check Risk Level</button>
+    <!-- Button that runs the JavaScript function to calculate the risk level -->
+
+    <div id="riskResult" class="result-box"></div>
+    <!-- Empty result box where the risk result will appear -->
+
+    <div id="alertBox" class="alert-box"></div>
+    <!-- Empty alert box where warning or extra guidance may appear -->
+  </section>
+
+  <a href="index.html" class="back-link">← Back to Dashboard</a>
+  <!-- Link back to the dashboard page -->
+</main>
+
+<script src="js/risk.js"></script>
+<!-- Links the JavaScript file that checks the selected risks and shows the result -->
+
+</body>
+<!-- Ends the body section -->
+
+</html>
+<!-- Ends the HTML document -->

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 document -->
+
+<html lang="en-GB">
+<!-- Starts the HTML document and sets the language to British English -->
+
+<head>
+  <!-- The head contains information about the page -->
+
+  <meta charset="UTF-8">
+  <!-- Allows text and symbols to display correctly -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes the page responsive on different screen sizes -->
+
+  <title>Article 6 Training</title>
+  <!-- Sets the browser tab title -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Links the external CSS file for page styling -->
+</head>
+
+<body>
+<!-- Starts the visible content of the webpage -->
+
+<header>
+  <!-- Top section of the page -->
+
+  <h1>GDPR Compliance Support Tool</h1>
+  <!-- Main heading shown on the page -->
+
+  <p>Article 6 Training: Lawfulness of Processing</p>
+  <!-- Subtitle showing the training topic -->
+</header>
+
+<main class="container">
+  <!-- Main content area of the page -->
+
+  <h2>Article 6 Training Module</h2>
+  <!-- Main heading for this training section -->
+
+  <p>
+    Article 6 explains the lawful bases organisations can rely on when processing
+    personal data. Read each explanation and answer the question.
+  </p>
+  <!-- Introductory text explaining what this module is about -->
+
+  <div class="progress-wrapper">
+    <!-- Wraps the progress text and progress bar together -->
+
+    <p id="progressText">Progress: 0 / 10 completed</p>
+    <!-- Displays how many questions have been completed -->
+
+    <div class="progress-bar">
+      <!-- Outer container of the progress bar -->
+
+      <div id="progressFill" class="progress-fill"></div>
+      <!-- Inner fill of the progress bar that updates with progress -->
+    </div>
+  </div>
+
+  <section class="lesson-card">
+    <!-- Lesson card 1 -->
+
+    <h3>1. Consent</h3>
+    <p><strong>Learn:</strong> Consent must be freely given, specific, informed, and unambiguous.</p>
+    <p><strong>Question:</strong> Which example shows valid consent?</p>
+
+    <div class="options">
+      <!-- Answer buttons for question 1 -->
+
+      <button type="button" onclick="checkAnswer(this, true, 'feedback1'); markComplete(1)">The user actively ticks a clear opt-in box</button>
+      <!-- Correct answer and marks question 1 complete -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback1')">A pre-ticked box is used</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback1')">The organisation assumes consent from silence</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback1" class="feedback"></div>
+    <!-- Empty feedback area for question 1 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 2 -->
+
+    <h3>2. Withdrawal of Consent</h3>
+    <p><strong>Learn:</strong> Individuals must be able to withdraw consent easily.</p>
+    <p><strong>Question:</strong> Why is easy withdrawal important?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback2'); markComplete(2)">Because control over personal data should remain with the individual</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback2')">Because it removes the need for transparency</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback2')">Because it makes all future processing lawful</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback2" class="feedback"></div>
+    <!-- Feedback area for question 2 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 3 -->
+
+    <h3>3. Contract</h3>
+    <p><strong>Learn:</strong> Processing may be lawful if it is necessary to perform a contract.</p>
+    <p><strong>Question:</strong> Which is an example of contract-based processing?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback3'); markComplete(3)">Using a customer address to deliver a purchased item</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback3')">Sending unrelated marketing emails</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback3')">Collecting extra data for no reason</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback3" class="feedback"></div>
+    <!-- Feedback area for question 3 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 4 -->
+
+    <h3>4. Steps Before Contract</h3>
+    <p><strong>Learn:</strong> Processing can also be lawful when necessary before entering into a contract at the individual’s request.</p>
+    <p><strong>Question:</strong> Which example fits this lawful basis?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback4'); markComplete(4)">Using contact details to prepare a requested quote</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback4')">Adding someone to a marketing list automatically</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback4')">Keeping data forever after a quote is refused</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback4" class="feedback"></div>
+    <!-- Feedback area for question 4 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 5 -->
+
+    <h3>5. Legal Obligation</h3>
+    <p><strong>Learn:</strong> Processing may be lawful if necessary to comply with a legal obligation.</p>
+    <p><strong>Question:</strong> Which is a valid example?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback5'); markComplete(5)">Processing payroll data for tax reporting</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback5')">Following an internal preference only</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback5')">Sending promotional texts without consent</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback5" class="feedback"></div>
+    <!-- Feedback area for question 5 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 6 -->
+
+    <h3>6. Vital Interests</h3>
+    <p><strong>Learn:</strong> This basis may apply in urgent situations where processing is necessary to protect someone’s life.</p>
+    <p><strong>Question:</strong> When is vital interests most likely to apply?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback6'); markComplete(6)">During a medical emergency where life is at risk</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback6')">For ordinary marketing activities</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback6')">For convenience in administration</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback6" class="feedback"></div>
+    <!-- Feedback area for question 6 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 7 -->
+
+    <h3>7. Public Task</h3>
+    <p><strong>Learn:</strong> Public task is mainly used by public authorities or bodies carrying out official functions.</p>
+    <p><strong>Question:</strong> Who is most likely to rely on public task?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback7'); markComplete(7)">A public authority performing an official duty</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback7')">A private retailer sending discounts</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback7')">A company collecting extra optional data</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback7" class="feedback"></div>
+    <!-- Feedback area for question 7 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 8 -->
+
+    <h3>8. Legitimate Interests</h3>
+    <p><strong>Learn:</strong> Legitimate interests may apply if processing is necessary for a genuine interest and does not override people’s rights.</p>
+    <p><strong>Question:</strong> What must be considered before relying on legitimate interests?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback8'); markComplete(8)">Whether the organisation’s interests are outweighed by the individual’s rights</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback8')">Whether the organisation prefers this option</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback8')">Whether consent can be ignored</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback8" class="feedback"></div>
+    <!-- Feedback area for question 8 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 9 -->
+
+    <h3>9. Choosing a Lawful Basis</h3>
+    <p><strong>Learn:</strong> The lawful basis should be identified before processing starts.</p>
+    <p><strong>Question:</strong> Why is this important?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback9'); markComplete(9)">Because it affects transparency, rights, and how processing is justified</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback9')">Because the basis can be invented later if needed</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback9')">Because it removes the need for documentation</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback9" class="feedback"></div>
+    <!-- Feedback area for question 9 -->
+  </section>
+
+  <section class="lesson-card">
+    <!-- Lesson card 10 -->
+
+    <h3>10. Record Keeping</h3>
+    <p><strong>Learn:</strong> Organisations should document the lawful basis used for each processing activity.</p>
+    <p><strong>Question:</strong> Why is documenting lawful basis important?</p>
+
+    <div class="options">
+      <button type="button" onclick="checkAnswer(this, true, 'feedback10'); markComplete(10)">It supports accountability and shows why processing is lawful</button>
+      <!-- Correct answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback10')">It replaces staff training</button>
+      <!-- Wrong answer -->
+
+      <button type="button" onclick="checkAnswer(this, false, 'feedback10')">It makes all processing consent-based</button>
+      <!-- Wrong answer -->
+    </div>
+
+    <div id="feedback10" class="feedback"></div>
+    <!-- Feedback area for question 10 -->
+  </section>
+
+  <div id="completionMessage" class="result-box" style="display: none;">
+    Well done. You completed the Article 6 training module.
+  </div>
+  <!-- Hidden completion message shown when all questions are completed -->
+
+  <a href="index.html" class="back-link">← Back to Dashboard</a>
+  <!-- Link back to the dashboard page -->
+</main>
+
+<script src="js/article6.js"></script>
+<!-- Links the JavaScript file for quiz logic and progress tracking -->
+
+</body>
+<!-- Ends the body section -->
+
+</html>
+<!-- Ends the HTML document -->
+
+<script src="js/article 6.js"></script>
+<!-- This extra script is outside the HTML document and is likely a mistake -->
